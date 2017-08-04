@@ -1,0 +1,51 @@
+<div class="container is-fluid">
+  <h1>Event List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Event Date</th>
+        <th>Event Price</th>
+        <th>Ticket Left</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of eventlist">
+        <td> {{ e.event_name }} </td>
+        <td> {{ e.event_time }} </td>
+        <td> {{ e.event_price }} </td>
+        <td> {{ e.event_ticket_amount }} </td>
+        <td>
+            <div class="modal">
+              <div class="modal-background"></div>
+              <div class="modal-card">
+                <header class="modal-card-head">
+                  <p class="modal-card-title">Enter Your Email</p>
+                  <button class="delete"></button>
+                </header>
+                <section class="modal-card-body">
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <p class="control has-icons-left has-icons-right">
+                      <input class="input is-info" type="text" placeholder="Insert your email" [(ngModel)]="ticket_buyer_email">
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fa fa-check"></i>
+                      </span>
+                    </p>
+                  </div>
+                </section>
+                <footer class="modal-card-foot">
+                  <button class="button is-success" (click)="buyTicket(e.event_id)">Save changes</button>
+                  <a class="button">Cancel</a>
+                </footer>
+              </div>
+            </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

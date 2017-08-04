@@ -1,0 +1,78 @@
+<div class="is-fluid">
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h3 class="title">
+        Event Registration
+      </h3>
+    </div>
+  </div>
+  </section>
+  <div class="container regiform">
+    <div class="field">
+      <br>
+      <label class="label">Event Name</label>
+      <p class="control has-icons-left has-icons-right">
+        <input class="input is-info" type="text" placeholder="Insert your name" [(ngModel)]="event_name">
+        <span class="icon is-small is-left">
+          <i class="fa fa-user"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fa fa-check"></i>
+        </span>
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label">Event Time</label>
+      <p class="control has-icons-left has-icons-right">
+        <input class="input is-info" type="text" placeholder="Insert your address" [(ngModel)]="event_time">
+        <span class="icon is-small is-left">
+          <i class="fa fa-address-card-o"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fa fa-check"></i>
+        </span>
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label">Event Price</label>
+      <p class="control has-icons-left has-icons-right">
+        <input class="input is-info" type="text" placeholder="Insert your email" [(ngModel)]="event_price">
+        <span class="icon is-small is-left">
+          <i class="fa fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fa fa-check"></i>
+        </span>
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label">Ticket Amount</label>
+      <p class="control has-icons-left has-icons-right">
+        <input class="input is-info" type="text" placeholder="Insert your email" [(ngModel)]="event_ticket_amount">
+        <span class="icon is-small is-left">
+          <i class="fa fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fa fa-check"></i>
+        </span>
+      </p>
+    </div>
+    <br>
+    <div class="field is-grouped">
+      <p class="control">
+        <a class="button is-primary" (click)="this.addEvent()">
+          Add New Event
+        </a>
+      </p>
+      <p class="control">
+        <button class="button is-danger">
+          Reset Form
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
